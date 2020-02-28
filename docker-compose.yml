@@ -1,0 +1,14 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:11.5-alpine
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=crashy
+      - POSTGRES_PASSWORD=crashy
+      - POSTGRES_DB=crashy
+    volumes:
+      - db:/var/lib/postgresql/data
+volumes:
+  db:
